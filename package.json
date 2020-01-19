@@ -1,0 +1,20 @@
+{
+  "name": "js-exercises",
+  "version": "1.0.0",
+  "description": "Javascript problems, each folder describes the location of where these exercises have been found. Each file has the description of the problem / request written inside it.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/airBogdan/js-exercises.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/airBogdan/js-exercises/issues"
+  },
+  "homepage": "https://github.com/airBogdan/js-exercises#readme"
+}
