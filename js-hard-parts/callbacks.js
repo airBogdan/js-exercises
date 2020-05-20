@@ -30,9 +30,41 @@ function forEach(array, cb) {
        cb(el);
    }
 }
-function forEachCb(a) {
-    alphabet+= a;
+function addToAlphabet(letter) {
+    alphabet+= letter;
 }
-// forEach(letters, forEachCb);
+// forEach(letters, addToAlphabet);
 // console.log(alphabet);
 
+// Challenge 6
+// The function 'reduce' takes an array and reduces the elements to a single value. For example it can sum all the numbers, multiply them, or any operation that you can put into a function.
+function reduce(array, cb, initialVal) {
+    for (let el of array) {
+        initialVal = cb(initialVal, el);
+    }
+    return initialVal;
+}
+
+function reduceAdd(initialVal, newVal) {
+    return initialVal + newVal;
+}
+
+// console.log(reduce([1,2,3,5], reduceAdd, 0));
+
+// Challenge 7
+// Construct a function intersection that compares input arrays and returns a new array with elements found in all of the inputs. BONUS: Use reduce!
+function intersection(...arrays) {
+    return reduce(arrays, compareArrays, arrays[0]);
+}
+function compareArrays(commonElementsArray, newArr) {
+    let result = [];
+    for (let el of newArr) {
+        if (commonElementsArray.indexOf(el) > -1) result.push(el)
+    }
+    return result;
+}
+
+// console.log(intersection([1, 2, 3, 5, 10, 99], [7, 10, 22, 11, 44,5], [5, 1, 2, 10, 99]));
+
+// Challenge 8
+// Construct a function union that compares input arrays and returns a new array that contains all elements. If there are duplicate elements, only add it once to the new array. Preserve the order of the elements starting from the first element of the first input array. BONUS: Use reduce!
