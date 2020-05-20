@@ -1,4 +1,4 @@
-Completed challenges from js-hard-parts course from frontendmasters
+**Completed challenges from js-hard-parts course from frontendmasters**
 
 Callbacks and Higher-Order Functions contains set of completed tasks from http://csbin.io/callbacks
 
